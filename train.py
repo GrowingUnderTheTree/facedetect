@@ -92,10 +92,10 @@ def make_model(input_shape, num_classes):
 
 model = make_model(input_shape=image_size + (3,), num_classes=2)
 
-epochs = 25
+epochs = 2
 
 callbacks = [
-    keras.callbacks.ModelCheckpoint("save_at_{epoch}.keras"),
+    keras.callbacks.ModelCheckpoint("dataset//save_at_{epoch}.keras"),
 ]
 model.compile(
     optimizer=keras.optimizers.Adam(1e-3),
